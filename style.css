@@ -1,0 +1,122 @@
+:root {
+    --bg-dark: #070a13;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --neon-cyan: #00f0ff;
+    --neon-purple: #8a2be2;
+    --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+/* Moving Gradient Background */
+body {
+    background: linear-gradient(-45deg, #070a13, #111827, #0f172a, #070a13);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.neon-text { color: var(--neon-cyan); text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+
+/* Glassmorphism Navbar */
+#navbar { position: fixed; top: 0; width: 100%; padding: 20px 5%; background: rgba(7, 10, 19, 0.7); backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid rgba(0, 240, 255, 0.1); transition: 0.3s; }
+#navbar.scrolled { padding: 12px 5%; box-shadow: 0 5px 20px rgba(0, 240, 255, 0.15); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.logo { font-size: 1.8rem; font-weight: 700; }
+.nav-links { list-style: none; display: flex; gap: 25px; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
+
+/* Hero Section */
+.hero { display: flex; align-items: center; justify-content: space-between; min-height: 100vh; padding: 100px 5% 50px; max-width: 1200px; margin: 0 auto; }
+.hero-content { flex: 1; }
+.greeting { font-size: 1.2rem; color: var(--neon-purple); font-weight: 600; letter-spacing: 2px; }
+.hero-content h1 { font-size: 4.5rem; line-height: 1.1; margin: 10px 0; }
+.profession { font-size: 1.8rem; color: var(--neon-cyan); margin-bottom: 20px; }
+.cursor { animation: blink 0.8s infinite; color: var(--neon-cyan); }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.description { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6; }
+
+/* Neon Button */
+.btn-neon {
+    display: inline-block; padding: 12px 30px; background: transparent; color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan); border-radius: 30px; font-weight: 600; font-size: 1.1rem;
+    text-decoration: none; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;
+    transition: 0.4s; box-shadow: 0 0 10px rgba(0, 240, 255, 0.2) inset;
+}
+.btn-neon:hover { background: var(--neon-cyan); color: var(--bg-dark); box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan); }
+
+/* Glowing Hero Image */
+.hero-image { flex: 1; position: relative; text-align: right; }
+.image-glow { position: absolute; width: 350px; height: 350px; background: var(--neon-purple); border-radius: 50%; filter: blur(100px); opacity: 0.4; right: 10%; top: 10%; z-index: -1; animation: pulseGlow 4s infinite alternate; }
+@keyframes pulseGlow { 0% { transform: scale(0.9); opacity: 0.3; } 100% { transform: scale(1.1); opacity: 0.6; } }
+.hero-image img { width: 100%; max-width: 400px; border-radius: 20px; filter: drop-shadow(0 0 20px rgba(0,240,255,0.3)); }
+
+/* 3D Card Effects (About & Gallery) */
+.about, .gallery, .contact { padding: 80px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+.about h2, .gallery h2, .contact h2 { font-size: 2.8rem; margin-bottom: 40px; }
+
+.3d-effect {
+    background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+.3d-effect:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.2);
+}
+
+/* About Card */
+.qual-card { padding: 40px; text-align: left; max-width: 800px; margin: 0 auto; }
+.qual-card h3 { color: var(--neon-purple); margin-bottom: 20px; font-size: 1.5rem; }
+.qual-card ul { list-style: none; margin-bottom: 20px; }
+.qual-card li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); }
+.qual-card li strong { color: var(--text-main); }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.gallery-item { overflow: hidden; }
+.gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; transition: transform 0.5s; opacity: 0.8; }
+.gallery-item:hover img { transform: scale(1.1); opacity: 1; filter: contrast(110%); }
+
+/* Contact Form */
+.contact-box { max-width: 600px; margin: 0 auto; padding: 40px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: #fff; font-size: 1rem; outline: none; transition: 0.3s; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--neon-cyan); box-shadow: 0 0 10px rgba(0,240,255,0.3); }
+
+/* Footer */
+footer { background: rgba(0,0,0,0.8); border-top: 1px solid rgba(255,255,255,0.05); padding: 25px; text-align: center; font-weight: 600; letter-spacing: 1px; color: var(--text-muted); }
+
+/* Scroll Animations */
+.animate-on-scroll { opacity: 0; transform: translateY(50px); transition: 0.8s ease-out; }
+.animate-on-scroll.show { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) { .nav-links { display: none; } .hero { flex-direction: column; text-align: center; padding-top: 130px; } .hero-content h1 { font-size: 3rem; } .image-glow { right: 50%; transform: translateX(50%); } }
+/* Footer Social Icons CSS */
+.footer-social-icons {
+    display: flex;
+    flex-wrap: wrap; /* मोबाइल में स्क्रीन से बाहर नहीं जाएंगे */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.footer-social-icons a {
+    color: var(--text-muted);
+    font-size: 1.8rem; /* फुटर के लिए आइकॉन थोड़े बड़े किए हैं */
+    transition: 0.4s;
+    display: inline-block;
+}
+.footer-social-icons a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px var(--neon-cyan);
+    transform: translateY(-8px) scale(1.15); /* माउस ले जाने पर मस्त हवा में उठेंगे */
+}

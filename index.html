@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Link (Icons के लिए) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- आपकी CSS फाइल का लिंक -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Neon Glassmorphism Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>My<span class="neon-text">Portfolio</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Typewriter Effect) -->
+    <section id="home" class="hero">
+        <div class="hero-content animate-on-scroll">
+            <p class="greeting">Hello, I am</p>
+            <h1>Client Name</h1>
+            <h2 class="profession">I am a <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p class="description">Welcome to my personal space. I believe in delivering high-quality work and creative solutions that stand out.</p>
+            <a href="#contact" class="btn-neon">Let's Talk</a>
+        </div>
+        <div class="hero-image animate-on-scroll">
+            <div class="image-glow"></div>
+            <img src="images/profile.png" alt="Profile Photo">
+        </div>
+    </section>
+
+    <!-- About & 3D Glowing Card -->
+    <section id="about" class="about">
+        <div class="about-content animate-on-scroll">
+            <h2>About & <span class="neon-text">Qualifications</span></h2>
+            <div class="qual-card 3d-effect">
+                <h3>My Education & Skills</h3>
+                <ul>
+                    <li><strong>Degree:</strong> B.Tech / B.A. / B.Sc. (Enter Year)</li>
+                    <li><strong>Experience:</strong> 3+ Years in the industry</li>
+                    <li><strong>Skills:</strong> HTML, CSS, JS, Python, UI/UX</li>
+                </ul>
+                <p>I am highly passionate about my field. I constantly strive to learn new things and update my knowledge to provide the best results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Neon Gallery -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title animate-on-scroll">My <span class="neon-text">Gallery</span></h2>
+        <div class="gallery-grid">
+            <div class="gallery-item 3d-effect animate-on-scroll">
+                <img src="images/gallery1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item 3d-effect animate-on-scroll">
+                <img src="images/gallery2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item 3d-effect animate-on-scroll">
+                <img src="images/gallery3.jpg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form (Dark Mode) -->
+    <section id="contact" class="contact">
+        <div class="contact-box animate-on-scroll 3d-effect">
+            <h2>Get In <span class="neon-text">Touch</span></h2>
+            <form id="tgForm" class="contact-form">
+                <input type="text" id="senderName" placeholder="Your Name" required>
+                <input type="email" id="senderEmail" placeholder="Your Email" required>
+                <textarea id="senderMessage" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn-neon">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Amarjeet Kumar -->
+    <footer>
+        <div class="footer-content">
+            
+            <!-- All Social Media Icons -->
+            <div class="footer-social-icons">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Snapchat"><i class="fab fa-snapchat"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+
+            <p>&copy; 2026 Created with <span class="neon-text">❤</span> by Amarjit Kumar</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
