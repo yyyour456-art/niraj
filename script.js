@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Advanced Typewriter Effect
-const words = ["Web Developer", "UI/UX Designer", "Freelancer", "Creator"];
+const words = ["Content Creator", "Video Editor", "YouTuber", "Digital Influencer"];
 let i = 0;
 let timer;
 
