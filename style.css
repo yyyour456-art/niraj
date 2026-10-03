@@ -120,3 +120,28 @@ footer { background: rgba(0,0,0,0.8); border-top: 1px solid rgba(255,255,255,0.0
     text-shadow: 0 0 15px var(--neon-cyan);
     transform: translateY(-8px) scale(1.15); /* माउस ले जाने पर मस्त हवा में उठेंगे */
 }
+/* Instagram Highlight Box CSS */
+.insta-box {
+    margin: 40px auto 0;
+    max-width: 800px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #e1306c; /* Instagram का ओरिजिनल कलर */
+    background: linear-gradient(90deg, rgba(225, 48, 108, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.insta-content { display: flex; align-items: center; gap: 20px; text-align: left; }
+.insta-logo-big { font-size: 3.5rem; color: #e1306c; text-shadow: 0 0 15px rgba(225, 48, 108, 0.5); }
+.insta-text h3 { color: var(--text-main); font-size: 1.5rem; margin-bottom: 5px; }
+.insta-text p { color: var(--text-muted); font-size: 1rem; font-weight: 600; }
+
+/* Instagram स्पेशल बटन */
+.insta-btn { border-color: #e1306c; color: #e1306c; box-shadow: 0 0 10px rgba(225, 48, 108, 0.2) inset; }
+.insta-btn:hover { background: #e1306c; color: #fff; box-shadow: 0 0 20px #e1306c, 0 0 40px #e1306c; }
+
+/* मोबाइल स्क्रीन के लिए सेटिंग */
+@media (max-width: 768px) {
+    .insta-box { flex-direction: column; gap: 20px; text-align: center; }
+    .insta-content { flex-direction: column; text-align: center; }
+}
